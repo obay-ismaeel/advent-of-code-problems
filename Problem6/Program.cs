@@ -13,7 +13,7 @@ int SolvePartOne(string[] input)
 
     var answer = 1;
 
-    for (int i = 0; i < times.Count(); i++) 
+    for (int i = 0; i < times.Count(); i++)
     {
         var time = times[i];
         var distance = distances[i];
@@ -23,13 +23,13 @@ int SolvePartOne(string[] input)
         //    c     <    X     (  b   -     X    )   =>    X^2 - bX + c < 0
         //    delta = b^2 - 4ac
 
-        var delta = Math.Pow(time, 2) - (4 * 1 * distance); 
+        var delta = Math.Pow(time, 2) - (4 * 1 * distance);
 
         var x1 = (-time + Math.Sqrt(delta)) / 2;
         var x2 = (-time - Math.Sqrt(delta)) / 2;
 
         var waysToWin = CalcWholeNumbersCountBetween(x1, x2);
-        
+
         answer *= waysToWin;
     }
 
