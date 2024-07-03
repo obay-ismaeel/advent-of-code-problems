@@ -38,6 +38,6 @@ int SolvePartOne()
 
 class Node
 {
-    public string Left { get; set; }
-    public string Right { get; set; }
+    public string? Left { get; set; }
+    public string? Right { get; set; }
 }
